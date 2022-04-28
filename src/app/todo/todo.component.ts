@@ -64,9 +64,7 @@ export class TodoComponent implements OnInit {
     this.done.splice(i, 1);
   }
 
-  editTask() {}
-
-  drop(event: CdkDragDrop<Task[]>) {
+  drop(event: CdkDragDrop<Task[]>): void {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
